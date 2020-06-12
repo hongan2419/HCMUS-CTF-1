@@ -26,4 +26,12 @@
 ## StackString
 - Decompiler stackstring with Ghidra Tool:
 - In function main you will see:
-
+- ![alt text](https://github.com/1712249/HCMUS-CTF/blob/master/stackstring.png)
+- Hexdecode you get:
+- local_50:}3
+- local_70:_Kc4tS{F
+- local_68:G_gn1rtS
+- local_58:uq1nhcet
+- local_78:TC-SUMCH
+- local_60_dlo_D00
+- Flag is: HCMUS-CTF{St4cK_Str1ng_G00D_old_techn1qu3}
