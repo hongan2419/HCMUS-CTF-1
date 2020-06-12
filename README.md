@@ -10,8 +10,8 @@
 - The flag is: HCMUS-CTF{Sh0uld_N0tz_Conc4ten4te_S+r1ng_SQQLLL}
 ## TellMe
 - Open file tellme.c
-- You wil this code:
-'
+- You will see this code:
+<pre><code>
 	if(userid == 0x3211 && !strcmp("sUpErPassHCMUS\n", passwd)){
 		printf("Wellcome back! Aministrator ^_^\n");
 		fflush(stdout);
@@ -19,4 +19,11 @@
 		system("/bin/cat flag");
 		exit(0);	
 	}
-'
+</code></pre>
+- UserID: 12817
+- Password: sUpErPassHCMUS
+- Flag is: HCMUS-CTF{Ohhh~Just_give_me_the_credential!!Nah}
+## StackString
+- Decompiler stackstring with Ghidra Tool:
+- In function main you will see:
+
