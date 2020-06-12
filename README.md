@@ -35,6 +35,12 @@
 - local_78:TC-SUMCH
 - local_60:_dlo_D00
 - Flag is: HCMUS-CTF{St4cK_Str1ng_G00D_old_techn1qu3}
+## Patient
+- Auto Click 500 times.
+- Flag is: HCMUS-CTF{WOW_yOu_are_p4tient}.
+## PatientRevenge
+- Auto Click 100000 times.
+- Flag is: HCMUS-CTF{I_hope_you_dont_click_by_hand}
 ## FlowMe
 - Openfile flowme.c.
 - You will see this code: 
