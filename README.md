@@ -9,3 +9,14 @@
 - This is basic SQL injection. Username: admin. Pass:'or '1'='1.
 - The flag is: HCMUS-CTF{Sh0uld_N0tz_Conc4ten4te_S+r1ng_SQQLLL}
 ## TellMe
+- Open file tellme.c
+- You wil this code:
+'
+	if(userid == 0x3211 && !strcmp("sUpErPassHCMUS\n", passwd)){
+		printf("Wellcome back! Aministrator ^_^\n");
+		fflush(stdout);
+		fflush(stdin);
+		system("/bin/cat flag");
+		exit(0);	
+	}
+'
